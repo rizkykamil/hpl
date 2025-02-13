@@ -45,7 +45,6 @@
                 /* Teks akan muncul setelah gambar */
             }
         }
-        
     </style>
     <div id="dtr-wrapper" class="clearfix">
 
@@ -513,9 +512,10 @@
                                     </div>
                                 </form>
 
-                                <div class="mt-4 text-center">
+                                <div class="mt-4 text-center" id="hplResultContainer" style="display: none;">
                                     <h4>Hari Perkiraan Lahir (HPL): <span id="hplResult">-</span></h4>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -531,7 +531,8 @@
 
                         <!-- column 1 starts -->
                         <div class="col-12 col-sm-6 col-lg-2 dtr-mb-30"> <a href="index.html"
-                                class="d-block dtr-mb-30"><img src="assets/images/logo.png" style="width: 100px; height: 100px;" alt="footer logo"></a>
+                                class="d-block dtr-mb-30"><img src="assets/images/logo.png"
+                                    style="width: 100px; height: 100px;" alt="footer logo"></a>
                             <div class="dtr-social-large">
                                 <ul class="dtr-social dtr-social-list social-light text-left">
                                     <li><a href="#" class="dtr-twitter color-grey" target="_blank" title="twitter"></a>
@@ -562,8 +563,11 @@
                             <h6>Get in Touch</h6>
                             <p class="d-flex dtr-mb-20"><i class="icon-envelope1 dtr-mt-5 dtr-mr-15"></i><span><a
                                         href="mailto:kelompok3@gmail.com">kelompok3@gmail.com</a></span></p>
-                            <p class="d-flex dtr-mb-20"><i class="icon-phone-alt dtr-mt-5 dtr-mr-15"></i><span>088801911633</span></p>
-                            <p class="d-flex dtr-mb-20"><i class="icon-map-marker-alt dtr-mt-5 dtr-mr-15"></i><span>poltekkes kemenkes semarang, Kampus 1 Jurusan Keperawatan</span></p>
+                            <p class="d-flex dtr-mb-20"><i
+                                    class="icon-phone-alt dtr-mt-5 dtr-mr-15"></i><span>088801911633</span></p>
+                            <p class="d-flex dtr-mb-20"><i
+                                    class="icon-map-marker-alt dtr-mt-5 dtr-mr-15"></i><span>poltekkes kemenkes
+                                    semarang, Kampus 1 Jurusan Keperawatan</span></p>
                         </div>
                         <!-- column 4 ends -->
 
@@ -587,12 +591,18 @@
     <script>
         document.getElementById('formKalkulator').addEventListener('submit', function (event) {
             event.preventDefault();
+
+            // Sembunyikan HPL sebelumnya jika sudah ditampilkan
+            const hplResultContainer = document.getElementById('hplResultContainer');
+            hplResultContainer.style.display = 'none'; // Sembunyikan elemen HPL jika form disubmit ulang
+
             // Ambil data dari form
             const hphtDay = parseInt(document.getElementById('hphtDay').value);
             const hphtMonth = parseInt(document.getElementById('hphtMonth').value);
             const hphtYear = parseInt(document.getElementById('hphtYear').value);
             const siklus = parseInt(document.getElementById('siklus').value) || 28; // Default ke 28 jika kosong
 
+            // Validasi input
             if (!hphtDay || !hphtMonth || !hphtYear) {
                 alert("Silakan isi semua kolom HPHT.");
                 return;
@@ -627,6 +637,9 @@
 
             // Tampilkan hasil
             document.getElementById('hplResult').innerText = `${hplDay} ${getMonthName(hplMonth)} ${hplYear}`;
+
+            // Tampilkan hasil HPL
+            hplResultContainer.style.display = 'block'; // Menampilkan elemen HPL
         });
 
         // Fungsi untuk mendapatkan nama bulan
