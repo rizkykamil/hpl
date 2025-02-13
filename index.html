@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Svasty HTML Landing Page</title>
+    <meta name="author" content="tansh">
+    <meta name="description" content="HTML Teamplate">
+    <meta name="keywords" content="health, donation">
+
+    <!-- FAVICON FILES -->
+    <link href="assets/images/icons/apple-touch-icon-144-precomposed.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="assets/images/icons/apple-touch-icon-120-precomposed.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="assets/images/icons/apple-touch-icon-76-precomposed.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="assets/images/icons/favicon.png" rel="shortcut icon">
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/iconfonts.css">
+    <link rel="stylesheet" href="assets/css/plugins.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/color-blue.css">
+</head>
+
+<body>
+    <style>
+        @media (max-width: 768px) {
+
+            /* Ubah urutan gambar dan teks di tampilan mobile */
+            .dtr-section .row {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .dtr-section .row .col-12.col-md-6:first-child {
+                order: 1;
+                /* Gambar akan muncul pertama (di atas) */
+            }
+
+            .dtr-section .row .col-12.col-md-6:last-child {
+                order: 2;
+                /* Teks akan muncul setelah gambar */
+            }
+        }
+        
+    </style>
+    <div id="dtr-wrapper" class="clearfix">
+
+        <!-- preloader starts -->
+        <div class="dtr-preloader">
+            <div class="dtr-preloader-inner">
+                <div class="dtr-preloader-img"></div>
+            </div>
+        </div>
+        <!-- preloader ends -->
+
+        <!-- Small Devices Header 
+============================================= -->
+        <div class="dtr-responsive-header fixed-top">
+            <div class="container">
+
+                <!-- small devices logo -->
+                <a href="index.html"><img src="assets/images/logo.png" style="max-width: 100px;max-height: 100px;"
+                        alt="logo"></a>
+                <!-- small devices logo ends -->
+
+                <!-- menu button -->
+                <button id="dtr-menu-button" class="dtr-hamburger" type="button"><span
+                        class="dtr-hamburger-lines-wrapper"><span class="dtr-hamburger-lines"></span></span></button>
+            </div>
+            <div class="dtr-responsive-header-menu"></div>
+        </div>
+        <!-- Small Devices Header ends 
+============================================= -->
+
+        <!-- Header 
+============================================= -->
+        <header id="dtr-header-global" class="fixed-top">
+            <div class="container">
+                <div class="d-flex align-items-center justify-content-between">
+
+                    <!-- header left starts -->
+                    <div class="dtr-header-left">
+
+                        <!-- logo -->
+                        <a class="logo-default dtr-scroll-link" href="#home"><img src="assets/images/logo.png"
+                                style="max-width: 100px;max-height: 100px;" alt="logo"></a>
+
+                        <!-- logo on scroll -->
+                        <a class="logo-alt dtr-scroll-link" href="#home"><img src="assets/images/logo.png"
+                                style="max-width: 100px;max-height: 100px;" alt="logo"></a>
+                        <!-- logo on scroll ends -->
+
+                    </div>
+                    <!-- header left ends -->
+
+                    <!-- menu starts-->
+                    <div class="main-navigation navbar navbar-expand-lg ml-auto">
+                        <ul class="dtr-scrollspy navbar-nav dtr-nav dark-nav-on-load dark-nav-on-scroll">
+                            <li class="nav-item"> <a class="nav-link" href="#about">Pengertian</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#rumus">Rumus</a> </li>
+                            <li class="nav-item"> <a class="nav-link" href="#kalkulator">Kalkulator</a> </li>
+                        </ul>
+                    </div>
+                    <!-- menu ends-->
+
+                </div>
+            </div>
+        </header>
+        <!-- header ends
+================================================== -->
+
+        <!-- == main content area starts == -->
+        <div id="dtr-main-content">
+
+            <!-- hero section starts
+================================================== -->
+            <section id="home" class="dtr-section parallax dtr-md-bg-hide mt-4"
+                style="background-image: url(assets/images/hero-img1.jpg);">
+                <div class="container">
+
+                    <!-- row starts -->
+                    <div class="row">
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-md-6 offset-md-6 position-relative hero-section-top-padding dtr-pb-70">
+                            <h1 class="color-blue">HPL Calculator</h1>
+                            <h4 class="color-dark-blue">Hitung HPL dengan Cepat dan Mudah</h4>
+                            <!-- <p>
+                            HPL adalah Hari Perkiraan Lahir. HPL adalah hari perkiraan lahir anak. HPL dihitung berdasarkan hari perkiraan lahir anak.
+                        </p>                     -->
+                        </div>
+                        <!-- row ends -->
+
+                    </div>
+            </section>
+            <!-- hero section ends
+================================================== -->
+
+            <!-- section starts
+================================================== -->
+            <section id="about" class="dtr-section dtr-pt-100 dtr-pb-80 bg-blue">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="text-size-xl color-white">Hari Perkiraan Lahir (HPL) adalah estimasi waktu
+                                kelahiran bayi yang dihitung berdasarkan usia kehamilan, penting untuk mempersiapkan
+                                persalinan dan memastikan kesehatan ibu serta janin.</p>
+                            <span class="vert-line mt-20 "></span>
+                            <br>
+                            <h4 class="color-white">Mari Kita Pelajari HPL Lebih Lanjut</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section ends
+================================================== -->
+
+            <!-- section starts
+================================================== -->
+            <section class="dtr-section dtr-py-100">
+                <div class="container">
+
+                    <!-- circle bg icon -->
+                    <div class="dtr-circle-icon bg-white color-orange"><i class="icon-mbri-down"></i></div>
+
+                    <!-- row 1 starts -->
+                    <div class="row align-items-center">
+
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-md-6 dtr-md-mb-30"> <img src="assets/images/ibu_hamil_1.jpg"
+                                style="width: 80%; height: 80%; border-radius: 40px;" alt="image">
+                        </div>
+                        <!-- column 1 ends -->
+
+                        <!-- column 2 starts -->
+                        <div class="col-12 col-md-6">
+                            <div class="clearfix dtr-mb-30">
+                                <p class="text-size-lg font-weight-200 color-blue">Pengertian Hari Perkiraan Lahir <span
+                                        class="font-weight-600 color-orange">(HPL)</span></p>
+                            </div>
+                            <p>
+                                Hari Perkiraan Lahir (HPL) adalah estimasi tanggal kelahiran bayi yang dihitung
+                                berdasarkan usia kehamilan. Biasanya, HPL ditentukan dengan menambahkan 40 minggu atau
+                                sekitar 280 hari sejak Hari Pertama Haid Terakhir (HPHT). Perhitungan ini didasarkan
+                                pada asumsi bahwa kehamilan berlangsung selama 9 bulan atau 40 minggu sejak HPHT
+                                (sumber: alodokter.com).
+                            </p>
+                            <br>
+                            <p>
+                                Namun, penting untuk dipahami bahwa HPL bersifat estimasi dan tidak menjamin tanggal
+                                pasti kelahiran. Bayi dapat lahir beberapa minggu sebelum atau setelah HPL yang
+                                diperkirakan. Mengetahui HPL membantu ibu hamil dan tenaga medis dalam memantau
+                                perkembangan janin dan mempersiapkan proses persalinan dengan lebih baik (sumber:
+                                primayahospital.com).
+                            </p>
+                        </div>
+                        <!-- column 2 ends -->
+
+                    </div>
+                    <!-- row 1 ends -->
+
+                    <!-- row 2 starts -->
+                    <div class="row align-items-center dtr-py-100">
+
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-md-6">
+                            <div class="clearfix dtr-mb-30">
+                                <p class="text-size-lg font-weight-200 color-blue">Pengertian Hari Pertama Haid Terakhir
+                                    <span class="font-weight-600 color-orange">HPHT</span></p>
+                            </div>
+                            <p>Hari Pertama Haid Terakhir (HPHT) adalah hari pertama dalam siklus menstruasi terakhir
+                                seorang wanita sebelum terjadi kehamilan (sumber: alodokter.com). HPHT digunakan sebagai
+                                acuan utama untuk menghitung usia kehamilan dan memperkirakan Hari Perkiraan Lahir (HPL)
+                                dengan cara menambahkan 280 hari atau 40 minggu dari tanggal tersebut (sumber:
+                                halodoc.com). Mengetahui HPHT penting bagi ibu hamil dan tenaga medis dalam memantau
+                                perkembangan janin serta mempersiapkan proses persalinan (sumber: primayahospital.com).
+                                Namun, metode ini lebih akurat bagi wanita dengan siklus menstruasi teratur, sementara
+                                bagi yang memiliki siklus tidak teratur, metode ultrasonografi (USG) dapat memberikan
+                                hasil yang lebih akurat dalam menentukan usia kehamilan (sumber: alodokter.com).
+                            </p>
+                        </div>
+                        <!-- column 1 ends -->
+
+                        <!-- column 2 starts -->
+                        <div class="col-12 col-md-6 text-right dtr-md-mt-30"> <img src="assets/images/testpek.jpg"
+                                style="width: 80%; height: 80%; border-radius: 40px;" alt="image"> </div>
+                        <!-- column 2 ends -->
+
+                    </div>
+                    <!-- row 2 ends -->
+                </div>
+            </section>
+            <!-- section ends
+================================================== -->
+
+            <!-- hashtag section starts
+================================================== -->
+            <section id="Cara Menghitung HPL" class="dtr-section dtr-pt-100 dtr-pb-80 bg-blue">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="text-size-xl color-white">Sudah tahu HPL, tapi belum tahu cara menghitungnya?</p>
+                            <span class="vert-line mt-20 "></span>
+                            <br>
+                            <h4 class="color-white">Mari Kita Pelajari Cara Menghitung HPL</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- hashtag section ends
+================================================== -->
+
+            <!-- features section starts
+================================================== -->
+            <section id="rumus" class="dtr-section dtr-py-100">
+                <div class="container">
+                    <!-- circle bg icon -->
+                    <div class="dtr-circle-icon bg-white color-orange"><i class="icon-mbri-down"></i></div>
+                    <!-- row 1 starts -->
+                    <div class="row align-items-center">
+
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-md-6 dtr-md-mb-30"> <img src="assets/images/rumus.jpg"
+                                style="width: 80%; height: 80%; border-radius: 40px;" alt="image">
+                        </div>
+                        <!-- column 1 ends -->
+
+                        <!-- column 2 starts -->
+                        <div class="col-12 col-md-6">
+                            <div class="clearfix dtr-mb-30">
+                                <p class="text-size-lg font-weight-200 color-blue">Menggunakan
+                                    <span class="font-weight-600 color-orange">Rumus Naegele</span></p>
+                            </div>
+                            <p>
+                                Metode ini merupakan metode paling umum yang digunakan untuk menghitung HPL jika wanita
+                                memiliki siklus menstruasi teratur (28 hari).
+                            </p>
+                            <br>
+                            <h3 class="color-blue">Rumus</h3>
+                            <p>
+                                HPL = HPHT + 7 hari - 3 bulan + 1 tahun
+                            </p>
+                            <br>
+                            <h3 class="color-blue">Contoh Perhitungan:</h3>
+                            <p>Jika seorang wanita memiliki HPHT pada 10 Januari 2024, maka perhitungannya:</p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Tambah 7 hari → 17 Januari 2024
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Kurangi 3 bulan → 17 Oktober 2023
+                                    </p>
+                                </li>
+                                <li>
+                                    Tambah 1 tahun → HPL: 17 Oktober 2024
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- column 2 ends -->
+
+                    </div>
+                    <!-- row 1 ends -->
+
+                    <!-- row 2 starts -->
+                    <div class="row align-items-center dtr-py-100">
+
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-md-6">
+                            <div class="clearfix dtr-mb-30">
+                                <p class="text-size-lg font-weight-200 color-blue">Menggunakan
+                                    <span class="font-weight-600 color-orange">Kalender Kehamilan</span></p>
+                            </div>
+                            <p>Metode ini sering digunakan oleh dokter atau bidan untuk menentukan HPL dengan bantuan
+                                kalender kehamilan atau aplikasi kehamilan.</p>
+                            <br>
+                            <ul>
+                                <li>
+                                    <p>
+                                        Kalender kehamilan memiliki tabel khusus yang memperhitungkan berbagai faktor,
+                                        termasuk siklus menstruasi yang mungkin tidak selalu 28 hari.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Aplikasi kehamilan juga dapat membantu menghitung HPL dengan memasukkan HPHT dan
+                                        memperhitungkan pola siklus menstruasi individu.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- column 1 ends -->
+
+                        <!-- column 2 starts -->
+                        <div class="col-12 col-md-6 text-right dtr-md-mt-30"> <img src="assets/images/testpek.jpg"
+                                style="width: 80%; height: 80%; border-radius: 40px;" alt="image"> </div>
+                        <!-- column 2 ends -->
+
+                    </div>
+                    <!-- row 2 ends -->
+
+                    <!-- row 3 starts -->
+                    <div class="row align-items-center">
+
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-md-6 dtr-md-mb-30"> <img src="assets/images/usg.jpg"
+                                style="width: 80%; height: 80%; border-radius: 40px;" alt="image">
+                        </div>
+                        <!-- column 1 ends -->
+
+                        <!-- column 2 starts -->
+                        <div class="col-12 col-md-6">
+                            <div class="clearfix dtr-mb-30">
+                                <p class="text-size-lg font-weight-200 color-blue">Menggunakan USG
+                                    <span class="font-weight-600 color-orange">(Ultrasonografi)</span></p>
+                            </div>
+                            <p>
+                                Jika siklus menstruasi tidak teratur atau HPHT tidak diketahui, USG menjadi metode yang
+                                lebih akurat dalam menentukan HPL, terutama pada trimester pertama kehamilan.
+                            </p>
+                            <br>
+                            <h3 class="color-blue">Cara kerja USG dalam menentukan HPL:</h3>
+                            <ul>
+                                <li>
+                                    <p>
+                                        <b>Trimester pertama (minggu 6-14):</b> USG mengukur panjang janin dari kepala
+                                        hingga bokong atau Crown-Rump Length (CRL). Pengukuran ini memiliki tingkat
+                                        akurasi tinggi dalam menentukan usia kehamilan dan HPL.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>Trimester kedua dan ketiga:</b> Jika USG dilakukan setelah trimester pertama,
+                                        HPL masih dapat diperkirakan menggunakan ukuran lingkar kepala, lingkar perut,
+                                        dan panjang tulang paha janin, tetapi akurasinya menurun dibandingkan trimester
+                                        pertama.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- column 2 ends -->
+
+                    </div>
+                    <!-- row 3 ends -->
+
+                    <!-- row 4 starts -->
+                    <div class="row align-items-center dtr-py-100">
+
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-md-6">
+                            <div class="clearfix dtr-mb-30">
+                                <p class="text-size-lg font-weight-200 color-blue">Menggunakan
+                                    <span class="font-weight-600 color-orange">Rata-Rata Panjang Siklus
+                                        Menstruasi</span></p>
+                            </div>
+                            <p>Metode ini digunakan jika seorang wanita memiliki siklus menstruasi yang tidak 28 hari.
+                            </p>
+                            <br>
+                            <h3 class="color-blue">Rumus</h3>
+                            <p>
+                                HPL = HPHT + 280 hari + (Siklus Menstruasi - 28 hari)
+                            </p>
+                            <br>
+                            <h3 class="color-blue">Contoh Perhitungan:</h3>
+                            <p>Jika HPHT adalah 10 Januari 2024, dan siklus menstruasi adalah 32 hari:</p>
+                            <ul>
+                                <li>
+                                    <p>
+                                        HPL dihitung dengan 280 hari + (32 - 28) hari
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        280 + 4 = 284 hari dari HPHT
+                                    </p>
+                                </li>
+                                <li>
+                                    HPL: 20 Oktober 2024
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- column 1 ends -->
+
+                        <!-- column 2 starts -->
+                        <div class="col-12 col-md-6 text-right dtr-md-mt-30"> <img src="assets/images/softx.jpg"
+                                style="width: 80%; height: 80%; border-radius: 40px;" alt="image"> </div>
+                        <!-- column 2 ends -->
+
+                    </div>
+                    <!-- row 4 ends -->
+                </div>
+            </section>
+            <!-- features section ends
+================================================== -->
+
+            <!-- testimonial section starts
+================================================== -->
+            <section id="Cara Menghitung HPL" class="dtr-section dtr-pt-100 dtr-pb-80 bg-blue">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="text-size-xl color-white">Sudah tahu HPL, tahu cara menghitungnya, tapi Masih
+                                bingung?</p>
+                            <span class="vert-line mt-20 "></span>
+                            <br>
+                            <h4 class="color-white">Kita bantu kamu!</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- testimonial section ends
+================================================== -->
+
+
+            <section id="kalkulator" class="dtr-section dtr-py-100">
+                <div class="container">
+
+                    <!-- circle bg icon -->
+                    <div class="dtr-circle-icon bg-white color-orange"><i class="icon-mbri-down"></i></div>
+
+                    <!-- row 1 starts -->
+                    <div class="row justify-content-center">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h2 class="text-center mt-3">Kalkulator Kehamilan</h2>
+                            </div>
+                            <div class="card-body">
+                                <form id="formKalkulator">
+                                    <div class="mb-4">
+                                        <label class="form-label">Hari Pertama Haid Terakhir (HPHT):</label>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input type="text" id="hphtDay" class="form-control"
+                                                    placeholder="Tanggal" required>
+                                            </div>
+                                            <div class="col">
+                                                <select id="hphtMonth" class="form-select" required>
+                                                    <option value="" disabled selected>Bulan</option>
+                                                    <option value="1">Januari</option>
+                                                    <option value="2">Februari</option>
+                                                    <option value="3">Maret</option>
+                                                    <option value="4">April</option>
+                                                    <option value="5">Mei</option>
+                                                    <option value="6">Juni</option>
+                                                    <option value="7">Juli</option>
+                                                    <option value="8">Agustus</option>
+                                                    <option value="9">September</option>
+                                                    <option value="10">Oktober</option>
+                                                    <option value="11">November</option>
+                                                    <option value="12">Desember</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <input type="text" id="hphtYear" class="form-control" placeholder="YYYY"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mb-4">
+                                        <label class="form-label">Lama Siklus Haid Rata-rata (22 - 45 hari,
+                                            opsional):</label>
+                                        <input type="text" id="siklus" class="form-control" placeholder="28">
+                                    </div>
+                                    <!-- center button -->
+                                    <div class="d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-primary">Hitung</button>
+                                    </div>
+                                </form>
+
+                                <div class="mt-4 text-center">
+                                    <h4>Hari Perkiraan Lahir (HPL): <span id="hplResult">-</span></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- footer section starts
+================================================== -->
+            <footer id="dtr-footer">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- column 1 starts -->
+                        <div class="col-12 col-sm-6 col-lg-2 dtr-mb-30"> <a href="index.html"
+                                class="d-block dtr-mb-30"><img src="assets/images/logo.png" style="width: 100px; height: 100px;" alt="footer logo"></a>
+                            <div class="dtr-social-large">
+                                <ul class="dtr-social dtr-social-list social-light text-left">
+                                    <li><a href="#" class="dtr-twitter color-grey" target="_blank" title="twitter"></a>
+                                    </li>
+                                    <li><a href="#" class="dtr-facebook color-grey " target="_blank"
+                                            title="facebook"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- column 1 ends -->
+
+                        <!-- column 2 starts -->
+                        <div class="col-12 col-sm-6 col-lg-4 dtr-mb-30">
+                            <h6>About</h6>
+                            <p>
+                                HPL Calculator adalah alat online yang membantu menghitung hari perkiraan lahir (HPL)
+                                dengan cepat dan mudah. Dengan menggunakan HPL Calculator, Anda dapat mengetahui
+                                kapan bayi Anda akan lahir berdasarkan hari pertama haid terakhir (HPHT) dan lama
+                                siklus haid rata-rata.
+                            </p>
+                            <p class="text-size-xs dtr-mt-20 dtr-mb-30">copyright© 2025 Kamil.<br>
+                                All rights reserved.</p>
+                        </div>
+                        <!-- column 2 ends -->
+
+                        <!-- column 4 starts -->
+                        <div class="col-12 col-sm-6 col-lg-3 dtr-mb-30">
+                            <h6>Get in Touch</h6>
+                            <p class="d-flex dtr-mb-20"><i class="icon-envelope1 dtr-mt-5 dtr-mr-15"></i><span><a
+                                        href="mailto:kelompok3@gmail.com">kelompok3@gmail.com</a></span></p>
+                            <p class="d-flex dtr-mb-20"><i class="icon-phone-alt dtr-mt-5 dtr-mr-15"></i><span>088801911633</span></p>
+                            <p class="d-flex dtr-mb-20"><i class="icon-map-marker-alt dtr-mt-5 dtr-mr-15"></i><span>poltekkes kemenkes semarang, Kampus 1 Jurusan Keperawatan</span></p>
+                        </div>
+                        <!-- column 4 ends -->
+
+                    </div>
+                </div>
+            </footer>
+            <!-- footer section ends
+================================================== -->
+
+        </div>
+        <!-- == main content area ends == -->
+
+    </div>
+    <!-- #dtr-wrapper ends -->
+
+    <!-- JS FILES -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        document.getElementById('formKalkulator').addEventListener('submit', function (event) {
+            event.preventDefault();
+            // Ambil data dari form
+            const hphtDay = parseInt(document.getElementById('hphtDay').value);
+            const hphtMonth = parseInt(document.getElementById('hphtMonth').value);
+            const hphtYear = parseInt(document.getElementById('hphtYear').value);
+            const siklus = parseInt(document.getElementById('siklus').value) || 28; // Default ke 28 jika kosong
+
+            if (!hphtDay || !hphtMonth || !hphtYear) {
+                alert("Silakan isi semua kolom HPHT.");
+                return;
+            }
+            if (siklus < 22 || siklus > 45) {
+                alert("Siklus harus antara 22 dan 45.");
+                return;
+            }
+            if (hphtDay < 1 || hphtDay > 31) {
+                alert("Hari harus antara 1 dan 31.");
+                return;
+            }
+            if (hphtMonth < 1 || hphtMonth > 12) {
+                alert("Bulan harus antara 1 dan 12.");
+                return;
+            }
+            if (hphtYear < 2023) {
+                alert("Tahun harus di atas 2023.");
+                return;
+            }
+
+            // Hitung HPL
+            const hphtDate = new Date(hphtYear, hphtMonth - 1, hphtDay); // Bulan dimulai dari 0
+            const tambahanHari = siklus - 28;
+            const hplDate = new Date(hphtDate);
+            hplDate.setDate(hplDate.getDate() + 280 + tambahanHari); // 280 hari ditambah tambahan siklus
+
+            // Format hasil
+            const hplDay = hplDate.getDate();
+            const hplMonth = hplDate.getMonth() + 1; // Bulan dalam format 1-12
+            const hplYear = hplDate.getFullYear();
+
+            // Tampilkan hasil
+            document.getElementById('hplResult').innerText = `${hplDay} ${getMonthName(hplMonth)} ${hplYear}`;
+        });
+
+        // Fungsi untuk mendapatkan nama bulan
+        function getMonthName(month) {
+            const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September",
+                "Oktober", "November", "Desember"
+            ];
+            return months[month - 1];
+        }
+    </script>
+</body>
+
+</html>
