@@ -476,7 +476,7 @@
                                         <div class="row">
                                             <div class="col">
                                                 <input type="text" id="hphtDay" class="form-control"
-                                                    placeholder="Tanggal" required>
+                                                    placeholder="Tanggal" pattern="\d*" required>
                                             </div>
                                             <div class="col">
                                                 <select id="hphtMonth" class="form-select" required>
@@ -497,14 +497,15 @@
                                             </div>
                                             <div class="col">
                                                 <input type="text" id="hphtYear" class="form-control" placeholder="YYYY"
-                                                    required>
+                                                    pattern="\d*" required>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="mb-4">
                                         <label class="form-label">Lama Siklus Haid Rata-rata (22 - 45 hari,
                                             opsional):</label>
-                                        <input type="text" id="siklus" class="form-control" placeholder="28">
+                                        <input type="text" id="siklus" class="form-control" placeholder="28"
+                                            pattern="\d*">
                                     </div>
                                     <!-- center button -->
                                     <div class="d-flex justify-content-center">
@@ -589,6 +590,16 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/custom.js"></script>
     <script>
+        function validateInput(event) {
+            const input = event.target;
+            input.value = input.value.replace(/[^0-9]/g, ''); // Menghapus karakter non-angka
+        }
+
+        document.getElementById('hphtDay').addEventListener('input', validateInput);
+        document.getElementById('hphtYear').addEventListener('input', validateInput);
+        document.getElementById('siklus').addEventListener('input', validateInput);
+    </script>
+    <script>
         document.getElementById('formKalkulator').addEventListener('submit', function (event) {
             event.preventDefault();
 
@@ -596,33 +607,29 @@
             const hplResultContainer = document.getElementById('hplResultContainer');
             hplResultContainer.style.display = 'none'; // Sembunyikan elemen HPL jika form disubmit ulang
 
+            // Fungsi untuk memvalidasi input hanya angka
+            // Fungsi untuk menghapus karakter non-angka
+            function onlyNumbers(event) {
+                let value = event.target.value;
+                // Menghapus semua karakter non-angka
+                value = value.replace(/[^0-9]/g, '');
+                event.target.value = value; // Set ulang nilai input
+            }
+
+            // Menambahkan event listener untuk input HPHT
+            document.getElementById('hphtDay').addEventListener('input', validateInput);
+            document.getElementById('hphtYear').addEventListener('input', validateInput);
+            document.getElementById('siklus').addEventListener('input', validateInput);
+
+
+
             // Ambil data dari form
+
             const hphtDay = parseInt(document.getElementById('hphtDay').value);
             const hphtMonth = parseInt(document.getElementById('hphtMonth').value);
             const hphtYear = parseInt(document.getElementById('hphtYear').value);
             const siklus = parseInt(document.getElementById('siklus').value) || 28; // Default ke 28 jika kosong
 
-            // Validasi input
-            if (!hphtDay || !hphtMonth || !hphtYear) {
-                alert("Silakan isi semua kolom HPHT.");
-                return;
-            }
-            if (siklus < 22 || siklus > 45) {
-                alert("Siklus harus antara 22 dan 45.");
-                return;
-            }
-            if (hphtDay < 1 || hphtDay > 31) {
-                alert("Hari harus antara 1 dan 31.");
-                return;
-            }
-            if (hphtMonth < 1 || hphtMonth > 12) {
-                alert("Bulan harus antara 1 dan 12.");
-                return;
-            }
-            if (hphtYear < 2023) {
-                alert("Tahun harus di atas 2023.");
-                return;
-            }
 
             // Hitung HPL
             const hphtDate = new Date(hphtYear, hphtMonth - 1, hphtDay); // Bulan dimulai dari 0
